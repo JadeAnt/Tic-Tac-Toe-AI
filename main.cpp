@@ -164,7 +164,7 @@ int checkVertical(){ //checks whether there are 3 in a row for either the Ai or 
   return 2; // no winner
 }
 
-//case 3: a cross win
+//case 3: a diagonal win
 int checkAcross(){ //checks whether there are 3 in a row for either the Ai or user
   if( gameBoard[0][0] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][2] ){
     if(gameBoard[1][1] == "| X |"){
