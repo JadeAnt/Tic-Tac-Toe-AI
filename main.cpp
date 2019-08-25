@@ -5,6 +5,14 @@ using namespace std;
 #define NR_ROWS 3
 #define NR_COLUMNS 3
 
+/* TO DO
+-Make sure is in it's most reduced form, if not reduce it
+-Check code for errors / inconsistencies before moving onto AI component
+-Test and check
+-Decide whether to use a queue or a stack for the AI component
+-Implement either one to consider the user's actions in order for the AI to decide the best move
+*/
+
 chr gameBoard[NR_ROWS][NR_COLUMNS];// the game board
 
 struct position{
