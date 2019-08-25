@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include "stack.h"
+
 using namespace std;
 
 #define NR_ROWS 3
@@ -15,10 +17,10 @@ using namespace std;
 
 chr gameBoard[NR_ROWS][NR_COLUMNS];// the game board
 
-struct position{
-  int x;
-  int y;
-};
+//Position struct has already been initialized in stack.h
+
+//stack functions have been created in stack.h, can now be called
+Stack gameMoves; 
 
 void CreateBoard(){  ////creates a new game board
   for(int i = 0; i < NR_ROWS; i++){
