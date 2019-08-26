@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "stack.h"
+#include "TTTAI.cpp"
 
 using namespace std;
 
