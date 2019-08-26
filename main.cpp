@@ -77,7 +77,7 @@ int checkHorizontal(){  //checks whether there are 3 in a row for either the Ai 
     
     else if(gameBoard[0][1] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
@@ -92,7 +92,7 @@ int checkHorizontal(){  //checks whether there are 3 in a row for either the Ai 
     
     else if(gameBoard[1][1] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
@@ -107,14 +107,14 @@ int checkHorizontal(){  //checks whether there are 3 in a row for either the Ai 
     
     else if(gameBoard[2][1] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
       break;
   }
   
-  return 2; //no winner
+  return 0; //no winner
 }
 
 //case 2: vertical win
@@ -127,7 +127,7 @@ int checkVertical(){ //checks whether there are 3 in a row for either the Ai or 
     
     else if(gameBoard[1][0] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
@@ -142,7 +142,7 @@ int checkVertical(){ //checks whether there are 3 in a row for either the Ai or 
     
     else if(gameBoard[1][1] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
@@ -157,14 +157,14 @@ int checkVertical(){ //checks whether there are 3 in a row for either the Ai or 
     
     else if(gameBoard[1][2] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
       break;
   }
   
-  return 2; // no winner
+  return 0; // no winner
 }
 
 //case 3: a diagonal win
@@ -177,7 +177,7 @@ int checkDiagonal(){ //checks whether there are 3 in a row for either the Ai or 
     
     else if(gameBoard[1][1] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
@@ -192,19 +192,34 @@ int checkDiagonal(){ //checks whether there are 3 in a row for either the Ai or 
     
     else if(gameBoard[1][1] == "| O |"){
       cout << "YOU LOSE \n";
-      return 0;
+      return 1;
     }
     
     else
       break;
   }
   
-  return 2; //no winner
+  return 0; //no winner
 }
 
 int main(){
   
-  /* return 0 = Ai win 
-     return 1 = User win
-     return 2 = no one won yet */
+  /* return 0 = no winner
+     return 1 = User or AI won
+     */
+  CreateBoard();
+  PrintBoard()
+  while(checkVertical() != 1 && checkHorizontal() != 1 && checkDiagonal() != 1){
+    
+    if(Check_if_Full_Board() == 1){
+      cout << "GAME OVER" << "\n";
+    }
+    
+    else{
+      
+    }
+    
+    PrintBoard();
+  }
+  
 }
