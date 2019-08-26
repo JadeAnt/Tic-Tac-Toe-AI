@@ -21,7 +21,7 @@ chr gameBoard[NR_ROWS][NR_COLUMNS];// the game board
 //Position struct has already been initialized in stack.h
 
 //stack functions have been created in stack.h, can now be called
-Stack gameMoves; 
+position gameMoves = new Stack; 
 
 void CreateBoard(){  ////creates a new game board
   for(int i = 0; i < NR_ROWS; i++){
